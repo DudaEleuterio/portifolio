@@ -1,0 +1,349 @@
+
+:root {
+    background-image: url("img/fundo1.jpg");
+     background-size: cover;      /* cobre toda a tela */
+     background-position: center; /* centraliza a imagem */
+  --text: #171d27;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --max-width: 1000px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+  color: var(--accent);
+}
+
+.profissao {
+  text-align: center; /* centraliza a imagem */
+  margin: 40px 0;
+}
+
+.profissao-img {
+  width: 100%;         /* ocupa toda a largura do container */
+  max-width: 1200px;    /* não passa de 600px */
+  height: auto;        /* mantém a proporção */
+  border-radius: 40px; /* bordas levemente arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+.hero {
+  display: flex;
+  gap:10px;
+  
+  padding:10px 0;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 250px;
+  border-radius: 20%;
+  object-fit: cover;
+  background: #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lead {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+
+.contact-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 700px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6e6f0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.contact-form button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: #1e4ed8;
+}
+
+.contact-form button.secondary {
+  background: #e6e6f0;
+  color: var(--text);
+}
+
+.feedback {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+
+.site-footer {
+  padding: 20px 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.topo-btn {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 12px;
+  display: none; /* só aparece com JS */
+  transition: background 0.2s;
+}
+
+.topo-btn:hover {
+  background: #1e4ed8;
+}
+
+/* Centraliza títulos, parágrafos e cards na página de Portfólio */
+main.container {
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza os cards horizontalmente */
+  gap: 20px;               /* espaço entre os cards */
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 250px;            /* largura fixa para os cards */
+  text-align: center;       /* centraliza conteúdo dentro do card */
+}
+
+.project-card h3,
+.project-card p {
+  margin-bottom: 10px;
+}
+
+
+#teste1{
+  list-style-position: inside; /* bolinhas dentro do bloco de texto */
+  text-align: center;          /* centraliza o texto e as bolinhas */
+  padding-left: 0;             /* remove recuo padrão */
+}
+
+
+h2{
+    text-align: center; 
+}
+
+#teste{
+    font-size: 32px;
+}
+
+#meu-paragrafo{
+  text-align: left;
+}
+
+#formacao{
+  text-align: center;
+}
+
+#descricao{
+    text-align: center;
+    font-size: 14px;
+}
+
+#teste1{
+   text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+    color:#1b3069;
+    text-align: center;
+}
+
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+  .main-nav {
+    display: flex;
+    gap: 16px;
+  }
+  .profile-photo {
+    margin-bottom: 12px;
+  }
+}
+
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espaço entre cada card */
+  margin-top: 20px;
+}
+
+.education article {
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: rgba(201, 207, 243, 0.644);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.education article h1,
+.education article h2,
+.education article h4 {
+  margin-bottom: 10px;
+  color: #1b3069;
+  text-align: center;
+}
+
+.education article p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #1b3069;
+  text-align: center;
+}
+
+.education article ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.education article ul li {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .education {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .education article {
+    flex: 1 1 45%;
+    margin: 10px 0;
+  }
+}
+
